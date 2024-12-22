@@ -25,6 +25,9 @@ func init() {
 	flags.String("cert", lib.DefaultCert, "path to TLS certificate")
 	flags.String("key", lib.DefaultKey, "path to TLS key")
 	flags.StringP("prefix", "P", lib.DefaultPrefix, "URL path prefix")
+
+	flags.StringP("permissions", "m", "CRUD", "default permission for new files")
+	flags.StringP("directory", "d", ".", "directory to serve")
 }
 
 var rootCmd = &cobra.Command{
